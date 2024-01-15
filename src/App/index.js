@@ -10,12 +10,15 @@ function App() {
   //     console.log(element.innerText)
   //   })
   // });
+  function click(e){
+    console.log(e.name);
+  }
   return (
     <div className="App">
       Hello !!
       <h1>{toto}</h1>
       <ul>
-        {t.map(p => <li key={p.id} onDoubleClick={() => console.log(p.name)}>{p.name}</li>)}
+        {t.map(p => <li key={p.id} onDoubleClick={()=>click(p)}>{p.name}</li>)}
         <Task/>
       </ul>
       <h2 className={styles.title}>Test</h2>
