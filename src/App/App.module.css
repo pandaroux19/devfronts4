@@ -4,4 +4,9 @@
 
 li{
     cursor: pointer;
+
+}
+
+.barrer{
+    text-decoration: line-through;
 }
