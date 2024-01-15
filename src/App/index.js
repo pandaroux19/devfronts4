@@ -5,17 +5,20 @@ import Task from '../Task/index.js'
 
 function App() {
   let toto="Hello Toto ! !"
-  document.querySelectorAll("li").forEach(element => {
-    element.addEventListener("click",()=>{
-      console.log(element.innerText)
-    })
-  });
+  // document.querySelectorAll("li").forEach(element => {
+  //   element.addEventListener("click",()=>{
+  //     console.log(element.innerText)
+  //   })
+  // });
+  function handleClick(e) {
+    console.log(e.name)
+  }
   return (
     <div className="App">
       Hello !!
       <h1>{toto}</h1>
       <ul>
-        {t.map(p => <li key={p.id}>{p.name}</li>)}
+        {t.map(p => <li key={p.id} onDoubleClick={handleClick(p)}>{p.name}</li>)}
         <Task/>
       </ul>
       <h2 className={styles.title}>Test</h2>
