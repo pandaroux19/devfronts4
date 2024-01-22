@@ -9,7 +9,7 @@ export default function Task(props) {
       }
       function barrler(){
         // this.classList.contains(styles.barrer) ? this.classList.remove(styles.barrer) : this.classList.add(styles.barrer)
-        setBarre(!isBarre);
+        setBarre(true);
     
       }
     return (

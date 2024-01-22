@@ -15,10 +15,11 @@ export default function TodoList() {
   
   function handleSubmit(event){
     event.preventDefault();
-      alert(task)
-      addTask(task);
+    alert(task)
+    addTask(task);
     setTab([...t])
-      console.log(tab)
+    setTask("")
+    console.log(tab)
     console.log(task)
   }
     return (
