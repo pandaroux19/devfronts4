@@ -5,12 +5,12 @@ import styles from '../App/App.module.css';
 
 export default function TodoList() {
   const [isTask, setTask] = useState(t);
-  console.log(isTask)
-
-  function handleSubmit(event, i){
-    event.preventDefault();
-    alert(i.value)
-    addTask(i)
+  
+  
+  function handleSubmit(i){
+      alert(i.value)
+      addTask(i)
+      setTask(t)
     console.log(isTask)
   }
     return (
@@ -20,7 +20,7 @@ export default function TodoList() {
             </ul>
             <form action="#">
                 <input type="text" name="text" id="text"/>
-                <input type="submit" value="OK" onClick={()=>handleSubmit(event, document.getElementById("text"))}/>
+                <button type="submit" onClick={()=>handleSubmit(document.getElementById("text"))}>OK</button>
             </form>
         </div>
     );
