@@ -1,16 +1,17 @@
-import React, {ReactElement} from 'react';
+import React, {ReactElement, useState} from 'react';
 
 export default function Task(props) {
+ const [bourlet,setBourlet] = useState(0)
+
     function click(e){
         console.log(e.name);
       }
       function barrler(){
-        this.classList.contains(styles.barrer) ? this.classList.remove(styles.barrer) : this.classList.add(styles.barrer)
-    
+        setBourlet(bourlet="barrer")    
       }
     return (
         <div>
-            <li key={props.id} onDoubleClick={()=>click(props)} onClick={()=>barrler()}>{props.name}</li>
+            <li className={bourlet} key={props.id} onDoubleClick={()=>click(props)} onClick={()=>barrler()}>{props.name}</li>
         </div>
     );
 }
