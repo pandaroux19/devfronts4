@@ -1,7 +1,7 @@
 import React, {ReactElement, useState} from 'react';
 import styles from '../App/App.module.css';
 
-export default function Task(props) {
+export default function TodoList(props) {
   const [isBarre, setBarre] = useState(false);
 
     function click(e){

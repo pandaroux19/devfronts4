@@ -3,3 +3,8 @@ let t = [{id:"0",name:"toto"},
         {id:"2",name: "jean"}]
 
 export {t}
+
+
+export function addTask(task){
+    t.push({id:"0",name:`${task}`})
+}
