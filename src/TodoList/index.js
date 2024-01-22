@@ -4,23 +4,32 @@ import Task from '../Task/index.js'
 import styles from '../App/App.module.css';
 
 export default function TodoList() {
-  const [isTask, setTask] = useState(t);
+  const [task, setTask] = useState("");
+  const [tab, setTab] = useState(t);
+  console.log(tab)
+
+  function handleChange(event){
+    setTask(event.target.value);
+  }
   
   
-  function handleSubmit(i){
-      alert(i.value)
-      addTask(i)
-      setTask(t)
-    console.log(isTask)
+  function handleSubmit(event){
+    event.preventDefault();
+      alert(task)
+      addTask(task);
+    setTab([...t])
+      console.log(tab)
+    console.log(task)
   }
     return (
         <div>
             <ul>
-                {t.map(p => <Task key={p.id} {...p}/>)}
+                {tab.map(p => <Task key={p.id} {...p}/>)}
             </ul>
-            <form action="#">
-                <input type="text" name="text" id="text"/>
-                <button type="submit" onClick={()=>handleSubmit(document.getElementById("text"))}>OK</button>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="task">Task</label>
+                <input type="text" name="text" id="text" value={task} onChange={handleChange}/>
+                <button type="submit">OK</button>
             </form>
         </div>
     );

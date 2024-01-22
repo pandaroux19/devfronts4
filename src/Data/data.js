@@ -6,6 +6,6 @@ export {t}
 
 
 export function addTask(task){
-    t.push({id:`${t.length}`,name:`${task.value}`})
+    t.push({id:`${t.length}`,name:`${task}`})
     console.log(t)
 }

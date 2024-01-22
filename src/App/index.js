@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       Hello !!
       <h1>{toto}</h1>
-      <TodoList/> {/*iteration*/}
+      <TodoList/> {/*iteration, tous les champs de l'objet*/}
       <h2 className={styles.title}>Test</h2>
     </div>
   );
