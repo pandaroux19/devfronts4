@@ -10,20 +10,11 @@ function App() {
   //   })
   // });
 
-  function handleSubmit(i){
-    alert(i.value)
-    addTask(i)
-  }
-
   return (
     <div className="App">
       Hello !!
       <h1>{toto}</h1>
       <TodoList/> {/*iteration*/}
-      <form action="#">
-        <input type="text" name="text" id="text"/>
-        <input type="submit" value="OK" onClick={()=>handleSubmit(document.getElementById("text"))}/>
-      </form>
       <h2 className={styles.title}>Test</h2>
     </div>
   );

@@ -4,22 +4,21 @@ import Task from '../Task/index.js'
 import styles from '../App/App.module.css';
 
 export default function TodoList(props) {
-  const [isBarre, setBarre] = useState(false);
   const [isTask, setTask] = useState(false);
 
-    function click(e){
-        console.log(e.name);
-      }
-      function barrler(){
-        // this.classList.contains(styles.barrer) ? this.classList.remove(styles.barrer) : this.classList.add(styles.barrer)
-        setBarre(!isBarre);
-    
-      }
+  function handleSubmit(i){
+    alert(i.value)
+    addTask(i)
+  }
     return (
         <div>
             <ul>
                 {t.map(p => <Task key={p.id} {...p}/>)}
             </ul>
+            <form action="#">
+                <input type="text" name="text" id="text"/>
+                <input type="submit" value="OK" onClick={()=>handleSubmit(document.getElementById("text"))}/>
+            </form>
         </div>
     );
 }
