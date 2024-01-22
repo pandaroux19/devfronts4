@@ -6,6 +6,7 @@ import styles from '../App/App.module.css';
 export default function TodoList() {
   const [task, setTask] = useState("");
   const [tab, setTab] = useState(t);
+  const [barreList, setBarreList] = useState([]);
   console.log(tab)
 
   function handleChange(event){
@@ -21,6 +22,7 @@ export default function TodoList() {
     setTask("")
     console.log(tab)
     console.log(task)
+
   }
     return (
         <div>
