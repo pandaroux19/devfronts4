@@ -1,7 +1,5 @@
-import {t, addTask} from '../Data/data.js';
 import '../App.css';
 import styles from './App.module.css';
-import Task from '../Task/index.js'
 import TodoList from '../TodoList/index.js'
 
 function App() {
@@ -21,12 +19,7 @@ function App() {
     <div className="App">
       Hello !!
       <h1>{toto}</h1>
-      <ul>
-        {t.map(p => <Task {...p}/>)}
-      </ul>
-      <ul>
-        {t.map(p => <TodoList {...p}/>)} {/*iteration*/}
-      </ul>
+      <TodoList/> {/*iteration*/}
       <form action="#">
         <input type="text" name="text" id="text"/>
         <input type="submit" value="OK" onClick={()=>handleSubmit(document.getElementById("text"))}/>

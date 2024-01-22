@@ -14,7 +14,7 @@ export default function Task(props) {
       }
     return (
         <div>
-            <li key={props.id} onDoubleClick={()=>click(props)} onClick={()=>barrler()} className={isBarre ? styles.barrer : null}>{props.name}</li>
+            <li onDoubleClick={()=>click(props)} onClick={()=>barrler()} className={isBarre ? styles.barrer : null}>{props.name}</li>
         </div>
     );
 }
