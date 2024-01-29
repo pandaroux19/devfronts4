@@ -6,7 +6,6 @@ import styles from '../App/App.module.css';
 export default function TodoList() {
   const [task, setTask] = useState("");
   const [tab, setTab] = useState(t);
-  const [barreList, setBarreList] = useState([]);
   console.log(tab)
 
   function handleChange(event){
@@ -22,12 +21,22 @@ export default function TodoList() {
     setTask("")
     console.log(tab)
     console.log(task)
-
   }
+
+  function barreTrue(id){
+    let v = t.find(x=>x.id === id)
+    v.barre = true;
+    let tab2 = []
+    // t.forEach(element => {
+    //   if (element.barre!=true) tab2.push(element)
+    // });
+    setTab([...t])
+  }
+
     return (
         <div>
             <ul>
-                {tab.map(p => <Task key={p.id} {...p}/>)}
+                {tab.map(p => <Task barreTrue={barreTrue} key={p.id} {...p}/>)}
             </ul>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="task">Task</label>
