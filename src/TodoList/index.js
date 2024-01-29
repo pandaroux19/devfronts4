@@ -35,9 +35,9 @@ export default function TodoList() {
 
     return (
         <div>
-            <ul>
+            <div>
                 {tab.map(p => <Task barreTrue={barreTrue} key={p.id} {...p}/>)}
-            </ul>
+            </div>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="task">Task</label>
                 <input type="text" name="text" id="text" value={task} onChange={handleChange}/>
