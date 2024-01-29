@@ -1,6 +1,6 @@
-let t = [{id:"0",name:"toto"},
-        {id:"1",name: "marie"},
-        {id:"2",name: "jean"}]
+let t = [{id:"0",name:"toto", barre:false},
+        {id:"1",name: "marie", barre:false},
+        {id:"2",name: "jean", barre:false}]
 
 export {t}
 
